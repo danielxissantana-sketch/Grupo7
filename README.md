@@ -9,7 +9,7 @@ executa a integração contínua e abre um pull request
 
 - **Rodrigo Forcinito Cruz** — Backend e Infraestrutura
 - **Giovana de Jesus Oliveira** — IA e Avaliação; co-responsável por Dados e Qualidade
-- **Daniel Cosme de Santana** — Produto e Interface; co-responsável por Dados e Qualidade
+- **Daniel Cosme de Santana** 2410004 — Produto e Interface; co-responsável por Dados e Qualidade
 
 ## Problema
 
