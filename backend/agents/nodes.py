@@ -116,5 +116,7 @@ def reviewer_node(state: AgentState) -> AgentState:
         )
         state["pr_url"] = pr_url
     except Exception as e:
-        state["error_info"] = classify_and_explain_error("ReviewerGitHubError", str(e))
+        err_info = classify_and_explain_error("ReviewerGitHubError", str(e))
+        err_info["message"] = str(e)
+        state["error_info"] = err_info
     return state

@@ -26,6 +26,38 @@ class GitHubClient:
 
     def create_pull_request(self, title: str, body: str, head_branch: str, base_branch: str = "main") -> str:
         try:
+            # 1. Cria a branch da issue (ex: issue-1-agent) no GitHub a partir da main
+            base_ref = self.repo.get_git_ref(f"heads/{base_branch}")
+            try:
+                self.repo.create_git_ref(ref=f"refs/heads/{head_branch}", sha=base_ref.object.sha)
+            except GithubException:
+                pass
+
+            # 2. Salva um arquivo com a solução na branch para gerar um commit real
+            file_path = f"resolucoes/{head_branch}.md"
+            commit_msg = f"feat: {title}"
+            try:
+                existing_file = self.repo.get_contents(file_path, ref=head_branch)
+                self.repo.update_file(
+                    path=file_path,
+                    message=commit_msg,
+                    content=body,
+                    sha=existing_file.sha,
+                    branch=head_branch
+                )
+            except GithubException:
+                self.repo.create_file(
+                    path=file_path,
+                    message=commit_msg,
+                    content=body,
+                    branch=head_branch
+                )
+
+            # 3. Cria o Pull Request (ou retorna o link se já houver um aberto)
+            open_prs = self.repo.get_pulls(state="open", head=f"{self.repo.owner.login}:{head_branch}", base=base_branch)
+            if open_prs.totalCount > 0:
+                return open_prs[0].html_url
+
             pr = self.repo.create_pull(
                 title=title,
                 body=body,
@@ -34,4 +66,6 @@ class GitHubClient:
             )
             return pr.html_url
         except GithubException as e:
-            raise Exception(f"Erro ao criar Pull Request: {e.data.get('message', str(e))}")
+            error_msg = e.data.get('message', str(e)) if hasattr(e, 'data') else str(e)
+            print("ERRO REAL DO GITHUB:", e.status, getattr(e, 'data', str(e)), flush=True)
+            raise Exception(f"GitHub ({e.status}): {error_msg}")
