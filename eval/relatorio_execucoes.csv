@@ -1,3 +1,4 @@
 ﻿Data/Hora;Issue;Passou no pytest?;Tokens Usados;Tempo (segundos);Motivo da Falha;Pull Request
 21/11/2026 09:58:40;#1 - Compras a partir de R$100,00 devem ter frete grátis;Sim;1000;1056.4;Nenhuma falha (Concluído com sucesso);https://github.com/danielxissantana-sketch/Grupo7/pull/3
 21/11/2026 17:03:33;#7 - Desconto de 10% para pagamento via PIX;Sim;1000;1072.29;Nenhuma falha (Concluído com sucesso);https://github.com/danielxissantana-sketch/Grupo7/pull/8
+21/11/2026 18:30:33;#10 - Parcelamento com juros simples (4x a 12x);Sim;1000;830.48;Nenhuma falha (Concluído com sucesso);https://github.com/danielxissantana-sketch/Grupo7/pull/11
