@@ -1,1 +1,21 @@
-
+services:
+  orchestrator-backend:
+    build: .
+    container_name: langgraph_orchestrator
+    ports:
+      - "8000:8000"
+    environment:
+      - OLLAMA_BASE_URL=http://host.docker.internal:11434
+      - OLLAMA_MODEL=${OLLAMA_MODEL:-llama3.2}
+      - GITHUB_TOKEN=${GITHUB_TOKEN}
+      - GITHUB_REPO=${GITHUB_REPO}
+      - MAX_STEPS=${MAX_STEPS:-30}
+      - MAX_TOKENS=${MAX_TOKENS:-150000}
+    volumes:
+      - ./backend:/app
+      - ./frontend:/frontend
+      - ./workspace:/workspace
+      - ./eval:/eval
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: unless-stopped
