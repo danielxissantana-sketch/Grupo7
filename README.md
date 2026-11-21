@@ -1,113 +1,123 @@
+# Tema 7 — Do ticket ao pull request: agente de engenharia de software
 
-CABEÇALHO
+Projeto da disciplina **Projetos de IA na Programação**.
 
-Tema 7 Grupo7) — Faça ticket ao pull request: agente de engenharia de software
-Projeto da disciplina Projetos de IA na Programação .
+Sistema multiagente que lê uma issue, planeja a solução, escreve código e testes,
+executa a integração contínua e abre um pull request
 
-Sistema multiagente que lê um problema, planeja a solução, escreve código e testes, executa a integração contínua e abre um pull request
+## Integrantes e papéis
 
-Integrantes e papéis:
-Daniel Cosme de Santana — Backend e Infraestrutura
-Giovana de Jesus Oliveira — IA e Avaliação; co-responsável por Dados e Qualidade
-Rodrigo Forcinito Cruz — Produto e Interface; co-responsável por Dados e Qualidade
+- **Rodrigo Forcinito Cruz** — Backend e Infraestrutura
+- **Giovana de Jesus Oliveira** — IA e Avaliação; co-responsável por Dados e Qualidade
+- **Daniel Cosme de Santana** — Produto e Interface; co-responsável por Dados e Qualidade
 
-Identificação do curso:
-Daniel Cosme de Santana - RA 2410004 - Projeto Integrado - EAD_PROINT_100.DD-BD-PI-10-74.2026.74
-Rodrigo Forcinito Cruz - RA 2522857 - Projeto Integrado - EAD_PROINT_100.DD-BD-PI-10-74.2026.74
-Giovana de Jesus Oliveira - RA 2402906 - Projeto Integrado - EAD_PROINT_100.DD-ADS-PI-10-74.2026.74
+## Problema
 
-Descrição:
-Orquestrador Multi-Agente (LangGraph + Ollama) — Projeto Grupo 7
+Agentes de IA que resolvem issues de software de forma autônoma falham por três motivos:
+não sabem quando parar e pedir ajuda humana, entram em loops de correção sem progresso e
+consomem tokens sem limite. Um pull request gerado nessas condições gera mais trabalho de
+revisão do que economia de tempo.
 
-Este repositório contém a implementação de um sistema autônomo de orquestração multi-agente construído com LangGraph e modelos de linguagem locais via Ollama (llama3.2), integrado à API do GitHub para automação completa do ciclo de desenvolvimento: leitura de Issues, planejamento com supervisão humana, geração de solução, validação e abertura automática de Pull Requests.
+**Pergunta de pesquisa:** um grafo multiagente com limites explícitos resolve mais issues,
+com menor custo por issue, do que uma única chamada ao mesmo modelo?
 
-Projeto desenvolvido para avaliação acadêmica (Tema 7: Do ticket ao pull request — Agente de Engenharia de Software).
+**Objetivo:** receber uma issue, planejar a solução, escrever código e testes, executar a
+CI e abrir o PR, sem intervenção humana nos casos dentro do escopo.
 
-🏗️ Arquitetura do Sistema
+**Escopo:** issues pequenas em Python, com testes de aceitação escritos antes da execução,
+em repositório de teste do grupo.
 
-O fluxo de trabalho é coordenado por um grafo de estados (LangGraph) composto por quatro agentes especializados:
+**Fora do escopo:** repositórios grandes, issues ambíguas e qualquer serviço pago.
 
-Planejador (planner_node): Consulta a Issue diretamente via API do GitHub, avalia se há ambiguidades nos requisitos e aciona o mecanismo de Human-in-the-loop (pausando a execução e solicitando esclarecimento ao operador no painel web) antes de estruturar o plano técnico.
+## Arquitetura
 
-Programador (programmer_node): Inspeciona os arquivos do workspace isolado no container Docker e elabora a solução técnica baseada no plano aprovado.
+Grafo com estado em LangGraph, executado sobre uma cópia isolada do repositório.
 
-Testador (tester_node): Executa a validação lógica e verifica a conformidade da entrega com os critérios da Issue.
+**Nó e Responsabilidade**
 
-Revisor & PR (reviewer_node): Consolida a revisão técnica e automatiza todo o fluxo Git no GitHub:
+- Planejador: lê a issue e produz o plano. Não grava arquivos; 
+- Programador: gera o diff no contêiner Docker, restrito aos caminhos permitidos;
+- Testador: executa o pytest e devolve o erro ao programador;
+- Revisor: confere escopo e estilo antes de abrir o PR;
+- Escalonamento humano: recebe a issue quando um limite é atingido. 
 
-Cria automaticamente uma branch isolada para a tarefa (issue-{numero}-agent) a partir da branch base (main).
+Fluxo:
 
-Registra um commit real com o relatório e plano de resolução em resolucoes/issue-{numero}-agent.md.
+    Issue (GitHub API)
+        |
+        v
+    Planejador --> Programador --> Testador
+                        ^              |
+                        |              | falha + orcamento disponivel
+                        +--------------+
+                                       |
+                                       | aprovado
+                                       v
+                                   Revisor --> PR (GitHub API)
+                                       |
+                                       | limite atingido
+                                       v
+                              Escalonamento humano
 
-Abre o Pull Request oficial vinculando a branch da issue à branch main e retorna o link direto no painel.
+Controles contra loops e custo:
 
-🛠️ Stack Tecnológica e Governança
+- Máximo de 5 iterações do laço programador–testador.
+- Orçamento de tokens e de tempo por issue, verificado antes de cada chamada.
+- Detecção de repetição: erro idêntico entre duas iterações escala o caso.
+- Detecção de escopo: diffs fora do plano são rejeitados.
 
-Orquestração: Python 3.11 + LangGraph (MemorySaver para persistência de estado e retomada após intervenção humana)
+## Stack
 
-LLM Local: Ollama (llama3.2)
+Python 3.12 · LangGraph · Ollama · Docker e Docker Compose · GitHub API · pytest ·
+GitHub Actions.
 
-Infraestrutura: Docker & Docker Compose (ambiente isolado)
+## Modelo de referência
 
-Integração Git: PyGithub / GitHub REST API
+Qwen2.5-Coder 3B em quantização Q4_K_M, executado localmente via Ollama. Ocupa cerca de
+2 GB em disco e exige aproximadamente 4 GB de memória livre, permitindo execução em
+notebook doméstico sem GPU dedicada.
 
-Interface & Telemetria: FastAPI + Server-Sent Events (SSE) + Tailwind CSS
+Hardware de referência: Intel(R) Core(TM) i5-3210M CPU @ 2.50GHz e RAM 8,0GB DDR3 sem GPU.
 
-Controle de Consumo e Segurança: Limites configuráveis de passos (MAX_STEPS) e tokens (MAX_TOKENS) por execução, além de classificação automática de erros em tempo real no painel.
+## Pré-requisitos
 
-🚀 Como Configurar e Executar
+- Python 3.12
+- Docker e Docker Compose
+- Ollama com o modelo baixado
+- Git e uma conta no GitHub
 
-1. Pré-requisitos
+## Testes e integração contínua
 
-Docker Desktop instalado e em execução.
+- Testes automatizados em tests/, executados com pytest.
+- CI em .github/workflows/ci.yml: roda os testes a cada push e pull request.
+- Código gerado por IA só entra na branch principal com teste que passa na CI.
+- Os testes de aceitação das 20 issues são escritos antes da execução dos agentes e
+  mantidos em origem protegida. O agente testador não pode alterá-los.
 
-Ollama instalado localmente com o modelo llama3.2 disponível:
+## Estrutura do repositório
 
-ollama run llama3.2
+    .
+    ├── README.md
+    ├── PROMPTS.md
+    ├── LICENSE
+    ├── docker-compose.yml
+    ├── .github/workflows/
+    ├── src/
+    ├── tests/
+    ├── eval/
+    ├── evidencias/
+    └── docs/
 
+## Uso de IA
 
-Token de Acesso Pessoal do GitHub (Fine-Grained PAT): Gere um token com acesso ao repositório do projeto contendo as seguintes permissões:
+As ferramentas de IA utilizadas pelo grupo foram o Copilot e Perflexity.
 
-Contents (Código): Leitura e gravação (Read and write) — necessário para criar branches e commits automatizados.
+## Contribuição dos integrantes
 
-Pull requests: Leitura e gravação (Read and write) — necessário para abertura automática do PR.
+- **Rodrigo Forcinito Cruz** — Backend, Infraestrutura, Docker, CI e integração com a API do GitHub;
+- **Giovana de Jesus Oliveira** — IA e Avaliação; co-responsável por Dados e Qualidade, além de Grafo LangGraph, agentes, métricas e testes automatizados;
+- **Daniel Cosme de Santana** — Produto e Interface; co-responsável por Dados e Qualidade, bem como de Documentação, pesquisa ABNT, catálogo de issues e datasets. 
 
-Issues e Metadata: Leitura (Read-only).
+## Licença
 
-2. Configuração de Variáveis de Ambiente (.env)
-
-Na raiz do projeto, crie um arquivo .env com suas credenciais locais:
-
-GITHUB_TOKEN=github_pat_seu_token_aqui
-GITHUB_REPO=danielxissantana-sketch/Grupo7
-OLLAMA_BASE_URL=http://host.docker.internal:11434
-OLLAMA_MODEL=llama3.2
-MAX_STEPS=30
-MAX_TOKENS=150000
-
-
-(O arquivo .env está protegido no .gitignore para evitar exposição de credenciais).
-
-3. Inicialização via Docker
-
-No terminal, dentro da pasta raiz do repositório, execute:
-
-docker-compose down
-docker-compose up --build
-
-
-4. Operação pelo Painel Web
-
-Acesse http://localhost:8000 no navegador, informe o número da Issue (ex: 1), defina a branch base (main) e clique em "Iniciar Execução". Caso o agente Planejador solicite esclarecimentos, responda diretamente pelo painel para retomar o fluxo até a geração do Pull Request.
-
-📊 Rastreabilidade e Evidências Acadêmicas
-
-Cada execução concluída gera registros auditáveis no GitHub:
-
-Histórico de Execução: Contagem de passos, consumo de tokens e linha do tempo no painel.
-
-Branch Isolada: Criação automática da branch issue-{numero}-agent.
-
-Commit Automatizado: Registro da resolução técnica na pasta resolucoes/.
-
-Pull Request Oficial: PR aberto e pronto para revisão/merge na branch principal.
+Distribuído sob a licença MIT. Veja o arquivo LICENSE.
