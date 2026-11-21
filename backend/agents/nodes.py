@@ -83,6 +83,8 @@ def save_execution_report(state: AgentState, pytest_passed: str, elapsed_seconds
             )
 
 def check_limits(state: AgentState) -> bool:
+    if state.get("error_info"):
+        return True
     if state.get("steps_count", 0) >= state.get("max_steps", 30):
         raw_msg = f"Limite máximo de passos ({state['max_steps']}) foi atingido."
         err = classify_and_explain_error("LimitExceeded", raw_msg)
@@ -125,21 +127,40 @@ def planner_node(state: AgentState) -> AgentState:
             return state
 
     issue = state["issue_data"]
-    operator_context = ""
     if state.get("operator_response"):
-        operator_context = f"\n\nResposta do operador: '{state['operator_response']}'"
-
-    prompt = f"""Analise a issue:
+        prompt = f"""Analise a issue com a resposta já fornecida pelo operador:
 Título: {issue['title']}
-Descrição: {issue['body']}{operator_context}
-Se faltar informação crítica, responda com 'PRECISA_ESCLARECIMENTO:' seguido da pergunta. Se houver informação, elabore um plano numerado.
+Descrição: {issue['body']}
+Resposta do operador: '{state['operator_response']}'
+
+Como o operador já esclareceu as dúvidas, NÃO peça mais esclarecimentos. Elabore apenas um plano técnico numerado para implementação.
+"""
+    else:
+        prompt = f"""Analise a issue abaixo:
+Título: {issue['title']}
+Descrição: {issue['body']}
+
+Se faltar qualquer informação crítica ou regra de negócio (ou se o texto avisar que há informações ausentes), responda começando exatamente com 'PRECISA_ESCLARECIMENTO:' seguido apenas das perguntas objetivas ao operador. Não crie código nem plano enquanto houver dúvidas. Se todas as regras estiverem claras, elabore um plano numerado.
 """
     try:
         llm = get_llm()
         response = llm.invoke([HumanMessage(content=prompt)]).content
         state["tokens_used"] = state.get("tokens_used", 0) + 250
-        if "PRECISA_ESCLARECIMENTO:" in response:
-            question = response.split("PRECISA_ESCLARECIMENTO:")[-1].strip()
+
+        upper_resp = response.upper()
+        needs_help = not state.get("operator_response") and (
+            "PRECISA_ESCLARECIMENTO" in upper_resp
+            or "PERGUNTAS PARA ESCLARECIMENTO" in upper_resp
+            or ("ESCLARECIMENTO" in upper_resp and "?" in response)
+        )
+
+        if needs_help:
+            if "PRECISA_ESCLARECIMENTO:" in response:
+                question = response.split("PRECISA_ESCLARECIMENTO:")[-1].strip()
+            elif "Perguntas para Esclarecimento" in response:
+                question = response.split("Perguntas para Esclarecimento")[-1].strip(" :\n")
+            else:
+                question = response.strip()
             state["needs_clarification"] = True
             state["clarification_question"] = question
         else:
@@ -155,6 +176,8 @@ Se faltar informação crítica, responda com 'PRECISA_ESCLARECIMENTO:' seguido 
     return state
 
 def programmer_node(state: AgentState) -> AgentState:
+    if state.get("error_info"):
+        return state
     print("--- [AGENTE] PROGRAMADOR ATIVO ---")
     state["current_step"] = "programmer"
     state["steps_count"] = state.get("steps_count", 0) + 1
@@ -177,6 +200,8 @@ def programmer_node(state: AgentState) -> AgentState:
     return state
 
 def tester_node(state: AgentState) -> AgentState:
+    if state.get("error_info"):
+        return state
     print("--- [AGENTE] TESTADOR ATIVO ---")
     state["current_step"] = "tester"
     state["steps_count"] = state.get("steps_count", 0) + 1
@@ -203,6 +228,8 @@ def tester_node(state: AgentState) -> AgentState:
     return state
 
 def reviewer_node(state: AgentState) -> AgentState:
+    if state.get("error_info"):
+        return state
     print("--- [AGENTE] REVISOR ATIVO ---")
     state["current_step"] = "reviewer"
     state["steps_count"] = state.get("steps_count", 0) + 1
