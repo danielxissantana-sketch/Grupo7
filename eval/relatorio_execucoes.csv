@@ -7,3 +7,33 @@
 21/11/2026 20:59:41;#17 - Cupom de desconto BEMVINDO15;Não;250;544.41;Limite máximo de passos (2) foi atingido.;-
 21/11/2026 21:15:42;#17 - Cupom de desconto BEMVINDO15;Não;250;1505.3;Limite máximo de tokens (30) foi atingido.;-
 21/11/2026 21:31:03;#17 - Cupom de desconto BEMVINDO15;Sim;1000;2425.59;Nenhuma falha (Concluído com sucesso);https://github.com/danielxissantana-sketch/Grupo7/pull/18
+24/11/2026 02:26:35;#20 - Cálculo de frete padrão por valor;Sim;1000;1087.94;Nenhuma falha (Concluído com sucesso);https://github.com/danielxissantana-sketch/Grupo7/pull/21
+24/11/2026 02:53:46;#22 - Desconto de 5% para pagamento no boleto;Sim;1000;757.63;Nenhuma falha (Concluído com sucesso);https://github.com/danielxissantana-sketch/Grupo7/pull/23
+24/11/2026 22:57:37;#24 - Cupom de desconto BEMVINDO15;Sim;1000;427.3;Nenhuma falha (Concluído com sucesso);https://github.com/danielxissantana-sketch/Grupo7/pull/25
+25/11/2026 00:02:58;#26 - Taxa adicional para frete expresso;Sim;1000;761.24;Nenhuma falha (Concluído com sucesso);https://github.com/danielxissantana-sketch/Grupo7/pull/27
+25/11/2026 02:27:06;#28 - Validação de disponibilidade em estoque;Sim;1000;675.87;Nenhuma falha (Concluído com sucesso);https://github.com/danielxissantana-sketch/Grupo7/pull/29
+25/11/2026 02:41:03;#30 - Cálculo de comissão do vendedor (3%);Sim;1000;658.93;Nenhuma falha (Concluído com sucesso);https://github.com/danielxissantana-sketch/Grupo7/pull/31
+25/11/2026 02:54:44;#32 - Acréscimo de embalagem para presente;Sim;1000;670.78;Nenhuma falha (Concluído com sucesso);https://github.com/danielxissantana-sketch/Grupo7/pull/33
+25/11/2026 03:13:42;#34 - Cálculo de imposto estadual (ICMS);Sim;1000;1008.12;Nenhuma falha (Concluído com sucesso);https://github.com/danielxissantana-sketch/Grupo7/pull/35
+25/11/2026 03:32:25;#36 - Pontos de fidelidade por compra;Sim;1000;981.69;Nenhuma falha (Concluído com sucesso);https://github.com/danielxissantana-sketch/Grupo7/pull/37
+25/11/2026 03:57:20;#38 - Validação de formato de CPF;Sim;1000;1173.88;Nenhuma falha (Concluído com sucesso);https://github.com/danielxissantana-sketch/Grupo7/pull/39
+25/11/2026 04:21:16;#40 - Desconto progressivo por quantidade;Sim;1000;731.58;Nenhuma falha (Concluído com sucesso);https://github.com/danielxissantana-sketch/Grupo7/pull/41
+25/11/2026 09:40:09;#42 - Bloqueio de valores negativos no pedido;Sim;1000;755.31;Nenhuma falha (Concluído com sucesso);https://github.com/danielxissantana-sketch/Grupo7/pull/43
+25/11/2026 09:54:17;#44 - Adicional regional de frete (Norte/Nordeste);Sim;1000;724.08;Nenhuma falha (Concluído com sucesso);https://github.com/danielxissantana-sketch/Grupo7/pull/45
+25/11/2026 10:22:00;#46 - Validação segura de cupons expirados;Sim;1000;1217.02;Nenhuma falha (Concluído com sucesso);https://github.com/danielxissantana-sketch/Grupo7/pull/47
+25/11/2026 10:39:23;#48 - Cashback de 5% para clientes VIP;Sim;1000;765.73;Nenhuma falha (Concluído com sucesso);https://github.com/danielxissantana-sketch/Grupo7/pull/49
+25/11/2026 10:56:09;#50 - Padronização de arredondamento monetário;Sim;1000;820.49;Nenhuma falha (Concluído com sucesso);https://github.com/danielxissantana-sketch/Grupo7/pull/51
+25/11/2026 11:15:43;#52 - Teto máximo de 30% de desconto total;Sim;1000;966.69;Nenhuma falha (Concluído com sucesso);https://github.com/danielxissantana-sketch/Grupo7/pull/53
+25/11/2026 11:46:54;#54 - Taxa administrativa para pedidos mínimos;Sim;1000;561.15;Nenhuma falha (Concluído com sucesso);https://github.com/danielxissantana-sketch/Grupo7/pull/55
+25/11/2026 12:08:03;#56 - Validação de formato de CEP;Sim;1000;958.94;Nenhuma falha (Concluído com sucesso);https://github.com/danielxissantana-sketch/Grupo7/pull/57
+25/11/2026 12:24:25;#58 - Cálculo de peso total do carrinho;Sim;1000;775.38;Nenhuma falha (Concluído com sucesso);https://github.com/danielxissantana-sketch/Grupo7/pull/59
+25/11/2026 12:45:31;#60 - Sobretaxa por excesso de peso (> 10 kg);Sim;1000;978.64;Nenhuma falha (Concluído com sucesso);https://github.com/danielxissantana-sketch/Grupo7/pull/61
+25/11/2026 13:05:05;#62 - Desconto de 15% no mês de aniversário;Sim;1000;651.13;Nenhuma falha (Concluído com sucesso);https://github.com/danielxissantana-sketch/Grupo7/pull/63
+25/11/2026 13:25:46;#64 - Resgate de pontos de fidelidade;Sim;1000;1101.73;Nenhuma falha (Concluído com sucesso);https://github.com/danielxissantana-sketch/Grupo7/pull/65
+25/11/2026 17:30:35;#66 - Validação básica de e-mail do cliente;Sim;1000;915.41;Nenhuma falha (Concluído com sucesso);https://github.com/danielxissantana-sketch/Grupo7/pull/67
+25/11/2026 18:05:44;#68 - Taxa de entrega agendada por turno;Sim;1000;1767.23;Nenhuma falha (Concluído com sucesso);https://github.com/danielxissantana-sketch/Grupo7/pull/69
+25/11/2026 18:28:53;#70 - Geração de texto de resumo do pedido;Sim;1000;1171.22;Nenhuma falha (Concluído com sucesso);https://github.com/danielxissantana-sketch/Grupo7/pull/71
+25/11/2026 18:41:09;#72 - Cálculo de estorno por cancelamento;Sim;1000;631.87;Nenhuma falha (Concluído com sucesso);https://github.com/danielxissantana-sketch/Grupo7/pull/73
+25/11/2026 18:56:14;#74 - Filtro de produtos disponíveis em oferta;Sim;1000;723.84;Nenhuma falha (Concluído com sucesso);https://github.com/danielxissantana-sketch/Grupo7/pull/75
+25/11/2026 19:11:50;#76 - Prazo estimado de entrega por região;Sim;1000;566.71;Nenhuma falha (Concluído com sucesso);https://github.com/danielxissantana-sketch/Grupo7/pull/77
+25/11/2026 19:30:01;#78 - Fechamento final do carrinho (regra geral);Sim;1000;814.88;Nenhuma falha (Concluído com sucesso);https://github.com/danielxissantana-sketch/Grupo7/pull/79
