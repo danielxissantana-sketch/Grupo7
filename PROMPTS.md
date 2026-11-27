@@ -3,11 +3,72 @@
 Aqui a gente registra as conversas com IA que influenciaram o projeto: o que pedimos,
 o que ela respondeu e o que a gente aceitou, corrigiu ou jogou fora.
 
+## Integrante
+
+* **Daniel Cosme de Santana** - RA 2410004 - Projeto integrador - EAD_PROINT_100.DD-BD-PI-10-74.2026.74 (Backend e Infraestrutura)
+
+# Registro de Uso de IA na Engenharia do Projeto (`PROMPTS.md`)
+
+Abaixo estão documentadas 10 interações principais utilizadas na concepção, desenvolvimento, depuração e operação do Orquestrador Multi-Agente (Tema 7).
+
+---
+
+### Interação 1 — Definição da Arquitetura Multi-Agente com LangGraph
+- **Contexto:** Estruturação inicial do fluxo entre os 4 agentes especializados exigidos no Tema 7.
+- **Prompt utilizado:** *"Crie a estrutura de estados (`AgentState`) e o grafo em LangGraph para um orquestrador de engenharia de software com 4 nós sequenciais: Planejador, Programador, Testador e Revisor, utilizando Ollama local."*
+- **Resultado e ajuste:** Gerou `state.py` e `graph.py`; adicionamos arestas condicionais para interromper o grafo em caso de erro ou pedido de esclarecimento.
+
+### Interação 2 — Regra de Pausa *Human-in-the-Loop* no Planejador
+- **Contexto:** Atender ao desafio central do trabalho (parar e pedir ajuda humana diante de requisitos ambíguos).
+- **Prompt utilizado:** *"Ajuste o prompt do `planner_node` para que, sempre que faltarem regras de negócio críticas na issue do GitHub, ele responda iniciando com `PRECISA_ESCLARECIMENTO:` e pause a execução até receber a resposta do operador."*
+- **Resultado e ajuste:** Implementado no `nodes.py` com detecção de palavras-chave em português e endpoint `/resume/{issue_number}` no FastAPI.
+
+### Interação 3 — Controle de Orçamento (`Max Passos` e `Max Tokens`)
+- **Contexto:** Evitar loops infinitos e estouro de recursos computacionais.
+- **Prompt utilizado:** *"Implemente uma função `check_limits(state)` verificada antes de cada agente que bloqueie a execução e registre `LimitExceeded` caso `steps_count >= max_steps` ou `tokens_used >= max_tokens`."*
+- **Resultado e ajuste:** Validado com travas de segurança no início de cada nó para evitar gravações duplicadas de erro.
+
+### Interação 4 — Prompt do Agente Programador
+- **Contexto:** Geração do plano de alteração e análise dos arquivos do workspace isolado.
+- **Prompt utilizado:** *"Configure o `programmer_node` para receber o plano aprovado pelo Planejador, listar os arquivos disponíveis em `/workspace` e gerar as notas técnicas de implementação respeitando os critérios de aceitação."*
+- **Resultado e ajuste:** Integrado ao `WorkspaceTools` para leitura segura do diretório montado no Docker.
+
+### Interação 5 — Validação Automatizada com `pytest` (Agente Testador)
+- **Contexto:** Garantir que nenhum Pull Request seja aberto sem passar pela suíte de testes.
+- **Prompt utilizado:** *"Crie o `tester_node` executando `subprocess.run(['pytest', '/workspace'])`, capturando o código de retorno e classificando falhas de teste como `TestFailure` no relatório."*
+- **Resultado e ajuste:** Configurado para bloquear a abertura do PR quando `pytest` retorna falha de asserção.
+
+### Interação 6 — Prompt do Agente Revisor e Integração com GitHub API
+- **Contexto:** Criação automática de branch e abertura de Pull Request após aprovação nos testes.
+- **Prompt utilizado:** *"Implemente o `reviewer_node` para consolidar o plano técnico, criar a branch `issue-{numero}-agent` e abrir o Pull Request via `GitHubClient` referenciando `Fix #{numero}`."*
+- **Resultado e ajuste:** Automatiza o fechamento da issue assim que um colega aprova o merge no GitHub.
+
+### Interação 7 — Painel Web de Monitoramento e Intervenção em Tempo Real
+- **Contexto:** Interface visual para configurar limites, acompanhar os agentes e responder às pausas humanas.
+- **Prompt utilizado:** *"Crie uma interface web em HTML/CSS/JS servida pelo FastAPI que exiba o andamento dos 4 agentes em tempo real via Server-Sent Events (`/stream`), caixa amarela de esclarecimento e caixa vermelha de diagnóstico de erro."*
+- **Resultado e ajuste:** Implementado em `frontend/index.html` com atualização dinâmica de tokens e tempo.
+
+### Interação 8 — Containerização Reproduzível com Docker Compose
+- **Contexto:** Garantir que o projeto suba com um único comando (`docker-compose up`) a custo zero.
+- **Prompt utilizado:** *"Escreva o `Dockerfile` e o `docker-compose.yml` conectando o backend FastAPI na porta 8000 ao Ollama rodando no host (`host.docker.internal:11434`) com volumes mapeados para `backend`, `frontend`, `workspace` e `eval`."*
+- **Resultado e ajuste:** Permite edição em tempo real e persistência dos relatórios CSV/Markdown no host.
+
+### Interação 9 — Automação das Métricas Experimentais (Rubricas 2 e 3)
+- **Contexto:** Registrar automaticamente taxa de resolução, tokens, tempo e categorias de falha.
+- **Prompt utilizado:** *"Adicione uma função `save_execution_report` que grave cada execução em `eval/relatorio_execucoes.csv` e consolide as médias e porcentagens em `eval/RELATORIO_METRICAS.md`."*
+- **Resultado e ajuste:** Complementado pelo script autônomo `eval/run_eval.py` para reexecução via terminal.
+
+### Interação 10 — Geração de Issues de Teste com Critérios de Aceitação
+- **Contexto:** Criar uma base padronizada de 30 issues de e-commerce para avaliação experimental.
+- **Prompt utilizado:** *"Gere 30 issues enxutas de regras de negócio em Python (cálculo de frete, descontos, cupons, validação de CPF/CEP e fechamento de carrinho) contendo título, descrição e critérios de aceitação objetivos para o `pytest`."*
+- **Resultado e ajuste:** Executadas no orquestrador para compor a amostra experimental e a análise de falhas.
+
+
 ## Integrantes
 
-- Rodrigo — Backend e Infraestrutura
-- Giovana — IA e Avaliação; também em Dados e Qualidade
-- Daniel — Produto e Interface; também em Dados e Qualidade
+* **Giovana de Jesus Oliveira** - RA 2402906 - Projeto integrador - EAD_PROINT_100.DD-ADS-PI-10-74.2026.74 (IA e Avaliação; co-responsável por Dados e Qualidade)
+* **Rodrigo Forcinito Cruz** - RA 2522857 - Projeto integrador - EAD_PROINT_100.DD-BD-PI-10-74.2026.74 (Produto e Interface; co-responsável por Dados e Qualidade)
+
 
 Ferramentas usadas: Copilot e Perplexity.
 

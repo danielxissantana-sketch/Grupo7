@@ -1,0 +1,250 @@
+
+langgraph_orchestrator  | INFO:     Will watch for changes in these directories: ['/app']
+langgraph_orchestrator  | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+langgraph_orchestrator  | INFO:     Started reloader process [1] using StatReload
+langgraph_orchestrator  | INFO:     Started server process [9]
+langgraph_orchestrator  | INFO:     Waiting for application startup.
+langgraph_orchestrator  | INFO:     Application startup complete.
+langgraph_orchestrator  | INFO:     172.19.0.1:54110 - "GET / HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:34620 - "GET /stream/26 HTTP/1.1" 200 OK
+langgraph_orchestrator  | --- [AGENTE] PLANEJADOR ATIVO ---
+langgraph_orchestrator  | INFO:     172.19.0.1:54112 - "POST /run/26 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:54112 - "GET /metrics/26 HTTP/1.1" 200 OK
+langgraph_orchestrator  | --- [AGENTE] PROGRAMADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] TESTADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] REVISOR ATIVO ---
+langgraph_orchestrator  | INFO:     172.19.0.1:55972 - "POST /resume/26 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:55972 - "GET /metrics/26 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:55972 - "GET /stream/26 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:55310 - "GET /stream/28 HTTP/1.1" 200 OK
+langgraph_orchestrator  | --- [AGENTE] PLANEJADOR ATIVO ---
+langgraph_orchestrator  | INFO:     172.19.0.1:55322 - "POST /run/28 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:56742 - "GET /metrics/28 HTTP/1.1" 200 OK
+langgraph_orchestrator  | --- [AGENTE] PROGRAMADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] TESTADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] REVISOR ATIVO ---
+langgraph_orchestrator  | INFO:     172.19.0.1:44942 - "POST /resume/28 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:52646 - "GET /stream/28 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:44942 - "GET /metrics/28 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:49828 - "GET /stream/30 HTTP/1.1" 200 OK
+langgraph_orchestrator  | --- [AGENTE] PLANEJADOR ATIVO ---
+langgraph_orchestrator  | INFO:     172.19.0.1:49826 - "POST /run/30 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:49826 - "GET /metrics/30 HTTP/1.1" 200 OK
+langgraph_orchestrator  | --- [AGENTE] PROGRAMADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] TESTADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] REVISOR ATIVO ---
+langgraph_orchestrator  | INFO:     172.19.0.1:39474 - "POST /resume/30 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:33846 - "GET /stream/30 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:39474 - "GET /metrics/30 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:43472 - "GET /stream/32 HTTP/1.1" 200 OK
+langgraph_orchestrator  | --- [AGENTE] PLANEJADOR ATIVO ---
+langgraph_orchestrator  | INFO:     172.19.0.1:43464 - "POST /run/32 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:50792 - "GET /metrics/32 HTTP/1.1" 200 OK
+langgraph_orchestrator  | --- [AGENTE] PROGRAMADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] TESTADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] REVISOR ATIVO ---
+langgraph_orchestrator  | INFO:     172.19.0.1:55826 - "POST /resume/32 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:55826 - "GET /stream/32 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:38664 - "GET /metrics/32 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:38292 - "GET /stream/34 HTTP/1.1" 200 OK
+langgraph_orchestrator  | --- [AGENTE] PLANEJADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] PROGRAMADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] TESTADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] REVISOR ATIVO ---
+langgraph_orchestrator  | INFO:     172.19.0.1:38284 - "POST /run/34 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:50062 - "GET /metrics/34 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:38852 - "GET /stream/36 HTTP/1.1" 200 OK
+langgraph_orchestrator  | --- [AGENTE] PLANEJADOR ATIVO ---
+langgraph_orchestrator  | INFO:     172.19.0.1:38842 - "POST /run/36 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:38842 - "GET /metrics/36 HTTP/1.1" 200 OK
+langgraph_orchestrator  | --- [AGENTE] PROGRAMADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] TESTADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] REVISOR ATIVO ---
+langgraph_orchestrator  | INFO:     172.19.0.1:49448 - "POST /resume/36 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:51312 - "GET /stream/36 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:49448 - "GET /metrics/36 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:44616 - "GET /stream/38 HTTP/1.1" 200 OK
+langgraph_orchestrator  | --- [AGENTE] PLANEJADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] PROGRAMADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] TESTADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] REVISOR ATIVO ---
+langgraph_orchestrator  | INFO:     172.19.0.1:44614 - "POST /run/38 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:37600 - "GET /metrics/38 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:33126 - "GET /stream/40 HTTP/1.1" 200 OK
+langgraph_orchestrator  | --- [AGENTE] PLANEJADOR ATIVO ---
+langgraph_orchestrator  | INFO:     172.19.0.1:33120 - "POST /run/40 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:33120 - "GET /metrics/40 HTTP/1.1" 200 OK
+langgraph_orchestrator  | --- [AGENTE] PROGRAMADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] TESTADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] REVISOR ATIVO ---
+langgraph_orchestrator  | INFO:     172.19.0.1:40424 - "POST /resume/40 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:43354 - "GET /metrics/40 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:43356 - "GET /stream/40 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:42854 - "GET /stream/42 HTTP/1.1" 200 OK
+langgraph_orchestrator  | --- [AGENTE] PLANEJADOR ATIVO ---
+langgraph_orchestrator  | INFO:     172.19.0.1:42852 - "POST /run/42 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:42852 - "GET /metrics/42 HTTP/1.1" 200 OK
+langgraph_orchestrator  | --- [AGENTE] PROGRAMADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] TESTADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] REVISOR ATIVO ---
+langgraph_orchestrator  | INFO:     172.19.0.1:57150 - "POST /resume/42 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:57150 - "GET /metrics/42 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:44656 - "GET /stream/42 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:52210 - "GET /stream/44 HTTP/1.1" 200 OK
+langgraph_orchestrator  | --- [AGENTE] PLANEJADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] PROGRAMADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] TESTADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] REVISOR ATIVO ---
+langgraph_orchestrator  | INFO:     172.19.0.1:52204 - "POST /run/44 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:52204 - "GET /metrics/44 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:49842 - "GET /stream/46 HTTP/1.1" 200 OK
+langgraph_orchestrator  | --- [AGENTE] PLANEJADOR ATIVO ---
+langgraph_orchestrator  | INFO:     172.19.0.1:49828 - "POST /run/46 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:49828 - "GET /metrics/46 HTTP/1.1" 200 OK
+langgraph_orchestrator  | --- [AGENTE] PROGRAMADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] TESTADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] REVISOR ATIVO ---
+langgraph_orchestrator  | INFO:     172.19.0.1:60306 - "POST /resume/46 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:60306 - "GET /metrics/46 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:60834 - "GET /stream/46 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:47980 - "GET /stream/48 HTTP/1.1" 200 OK
+langgraph_orchestrator  | --- [AGENTE] PLANEJADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] PROGRAMADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] TESTADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] REVISOR ATIVO ---
+langgraph_orchestrator  | INFO:     172.19.0.1:47964 - "POST /run/48 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:47964 - "GET /metrics/48 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:42306 - "GET /stream/50 HTTP/1.1" 200 OK
+langgraph_orchestrator  | --- [AGENTE] PLANEJADOR ATIVO ---
+langgraph_orchestrator  | INFO:     172.19.0.1:42292 - "POST /run/50 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:42292 - "GET /metrics/50 HTTP/1.1" 200 OK
+langgraph_orchestrator  | --- [AGENTE] PROGRAMADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] TESTADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] REVISOR ATIVO ---
+langgraph_orchestrator  | INFO:     172.19.0.1:53564 - "POST /resume/50 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:36720 - "GET /stream/50 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:36716 - "GET /metrics/50 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:37654 - "GET /stream/52 HTTP/1.1" 200 OK
+langgraph_orchestrator  | --- [AGENTE] PLANEJADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] PROGRAMADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] TESTADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] REVISOR ATIVO ---
+langgraph_orchestrator  | INFO:     172.19.0.1:37650 - "POST /run/52 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:37650 - "GET /metrics/52 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:57062 - "GET /stream/54 HTTP/1.1" 200 OK
+langgraph_orchestrator  | --- [AGENTE] PLANEJADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] PROGRAMADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] TESTADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] REVISOR ATIVO ---
+langgraph_orchestrator  | INFO:     172.19.0.1:57060 - "POST /run/54 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:57060 - "GET /metrics/54 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:35278 - "GET /stream/56 HTTP/1.1" 200 OK
+langgraph_orchestrator  | --- [AGENTE] PLANEJADOR ATIVO ---
+langgraph_orchestrator  | INFO:     172.19.0.1:35272 - "POST /run/56 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:35272 - "GET /metrics/56 HTTP/1.1" 200 OK
+langgraph_orchestrator  | --- [AGENTE] PROGRAMADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] TESTADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] REVISOR ATIVO ---
+langgraph_orchestrator  | INFO:     172.19.0.1:49350 - "POST /resume/56 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:49350 - "GET /metrics/56 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:41066 - "GET /stream/56 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:44048 - "GET /stream/58 HTTP/1.1" 200 OK
+langgraph_orchestrator  | --- [AGENTE] PLANEJADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] PROGRAMADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] TESTADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] REVISOR ATIVO ---
+langgraph_orchestrator  | INFO:     172.19.0.1:44046 - "POST /run/58 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:44046 - "GET /metrics/58 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:34072 - "GET /stream/60 HTTP/1.1" 200 OK
+langgraph_orchestrator  | --- [AGENTE] PLANEJADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] PROGRAMADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] TESTADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] REVISOR ATIVO ---
+langgraph_orchestrator  | INFO:     172.19.0.1:34068 - "POST /run/60 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:34068 - "GET /metrics/60 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:56724 - "GET /stream/62 HTTP/1.1" 200 OK
+langgraph_orchestrator  | --- [AGENTE] PLANEJADOR ATIVO ---
+langgraph_orchestrator  | INFO:     172.19.0.1:56722 - "POST /run/62 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:56722 - "GET /metrics/62 HTTP/1.1" 200 OK
+langgraph_orchestrator  | --- [AGENTE] PROGRAMADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] TESTADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] REVISOR ATIVO ---
+langgraph_orchestrator  | INFO:     172.19.0.1:56370 - "POST /resume/62 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:38026 - "GET /stream/62 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:56370 - "GET /metrics/62 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:42378 - "GET /stream/64 HTTP/1.1" 200 OK
+langgraph_orchestrator  | --- [AGENTE] PLANEJADOR ATIVO ---
+langgraph_orchestrator  | INFO:     172.19.0.1:42372 - "POST /run/64 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:42372 - "GET /metrics/64 HTTP/1.1" 200 OK
+langgraph_orchestrator  | --- [AGENTE] PROGRAMADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] TESTADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] REVISOR ATIVO ---
+langgraph_orchestrator  | INFO:     172.19.0.1:53262 - "POST /resume/64 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:41912 - "GET /stream/64 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:41904 - "GET /metrics/64 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:60072 - "GET /stream/66 HTTP/1.1" 200 OK
+langgraph_orchestrator  | --- [AGENTE] PLANEJADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] PROGRAMADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] TESTADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] REVISOR ATIVO ---
+langgraph_orchestrator  | INFO:     172.19.0.1:60058 - "POST /run/66 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:60058 - "GET /metrics/66 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:50966 - "GET /stream/68 HTTP/1.1" 200 OK
+langgraph_orchestrator  | --- [AGENTE] PLANEJADOR ATIVO ---
+langgraph_orchestrator  | INFO:     172.19.0.1:50964 - "POST /run/68 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:56710 - "GET /metrics/68 HTTP/1.1" 200 OK
+langgraph_orchestrator  | --- [AGENTE] PROGRAMADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] TESTADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] REVISOR ATIVO ---
+langgraph_orchestrator  | INFO:     172.19.0.1:48808 - "POST /resume/68 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:48808 - "GET /stream/68 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:51966 - "GET /metrics/68 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:57734 - "GET /stream/70 HTTP/1.1" 200 OK
+langgraph_orchestrator  | --- [AGENTE] PLANEJADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] PROGRAMADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] TESTADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] REVISOR ATIVO ---
+langgraph_orchestrator  | INFO:     172.19.0.1:57732 - "POST /run/70 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:57732 - "GET /metrics/70 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:36546 - "GET /stream/72 HTTP/1.1" 200 OK
+langgraph_orchestrator  | --- [AGENTE] PLANEJADOR ATIVO ---
+langgraph_orchestrator  | INFO:     172.19.0.1:36532 - "POST /run/72 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:36532 - "GET /metrics/72 HTTP/1.1" 200 OK
+langgraph_orchestrator  | --- [AGENTE] PROGRAMADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] TESTADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] REVISOR ATIVO ---
+langgraph_orchestrator  | INFO:     172.19.0.1:41578 - "POST /resume/72 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:46336 - "GET /stream/72 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:46338 - "GET /metrics/72 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:42816 - "GET /stream/74 HTTP/1.1" 200 OK
+langgraph_orchestrator  | --- [AGENTE] PLANEJADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] PROGRAMADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] TESTADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] REVISOR ATIVO ---
+langgraph_orchestrator  | INFO:     172.19.0.1:42802 - "POST /run/74 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:42802 - "GET /metrics/74 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:53422 - "GET /stream/76 HTTP/1.1" 200 OK
+langgraph_orchestrator  | --- [AGENTE] PLANEJADOR ATIVO ---
+langgraph_orchestrator  | INFO:     172.19.0.1:53412 - "POST /run/76 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:53412 - "GET /metrics/76 HTTP/1.1" 200 OK
+langgraph_orchestrator  | --- [AGENTE] PROGRAMADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] TESTADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] REVISOR ATIVO ---
+langgraph_orchestrator  | INFO:     172.19.0.1:58506 - "POST /resume/76 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:41372 - "GET /stream/76 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:41370 - "GET /metrics/76 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:41578 - "GET /stream/78 HTTP/1.1" 200 OK
+langgraph_orchestrator  | --- [AGENTE] PLANEJADOR ATIVO ---
+langgraph_orchestrator  | INFO:     172.19.0.1:41564 - "POST /run/78 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:41564 - "GET /metrics/78 HTTP/1.1" 200 OK
+langgraph_orchestrator  | --- [AGENTE] PROGRAMADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] TESTADOR ATIVO ---
+langgraph_orchestrator  | --- [AGENTE] REVISOR ATIVO ---
+langgraph_orchestrator  | INFO:     172.19.0.1:58684 - "POST /resume/78 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:58684 - "GET /metrics/78 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:46268 - "GET /stream/78 HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:55446 - "GET / HTTP/1.1" 200 OK
+
+langgraph_orchestrator  | INFO:     172.19.0.1:53494 - "GET / HTTP/1.1" 200 OK
+langgraph_orchestrator  | INFO:     172.19.0.1:34942 - "GET / HTTP/1.1" 200 OK
+
