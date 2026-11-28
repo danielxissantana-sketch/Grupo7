@@ -1,0 +1,24 @@
+{
+  "issue": 34,
+  "timestamp": "27/11/2026 22:39:06",
+  "etapas": [
+    {
+      "etapa": "chamada_unica",
+      "tokens_prompt": 2050,
+      "tokens_gerados": 749
+    },
+    {
+      "etapa": "aplicar_diff",
+      "ok": false
+    }
+  ],
+  "resultado": {
+    "Data/Hora": "27/11/2026 22:39:06",
+    "Issue": "#34 - Cálculo de imposto estadual (ICMS)",
+    "Passou no pytest?": "Não",
+    "Tokens Usados": 2799,
+    "Tempo (segundos)": 361.44,
+    "Motivo da Falha": "Diff inválido ou não aplicável",
+    "Pull Request": "-"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "issue": 46,
+  "timestamp": "27/11/2026 23:38:01",
+  "etapas": [
+    {
+      "etapa": "chamada_unica",
+      "tokens_prompt": 2050,
+      "tokens_gerados": 844
+    },
+    {
+      "etapa": "aplicar_diff",
+      "ok": false
+    }
+  ],
+  "resultado": {
+    "Data/Hora": "27/11/2026 23:38:01",
+    "Issue": "#46 - Validação segura de cupons expirados",
+    "Passou no pytest?": "Não",
+    "Tokens Usados": 2894,
+    "Tempo (segundos)": 406.71,
+    "Motivo da Falha": "Diff inválido ou não aplicável",
+    "Pull Request": "-"
+  }
+}

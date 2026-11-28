@@ -1,0 +1,24 @@
+{
+  "issue": 58,
+  "timestamp": "28/11/2026 00:56:54",
+  "etapas": [
+    {
+      "etapa": "chamada_unica",
+      "tokens_prompt": 2050,
+      "tokens_gerados": 553
+    },
+    {
+      "etapa": "aplicar_diff",
+      "ok": false
+    }
+  ],
+  "resultado": {
+    "Data/Hora": "28/11/2026 00:56:54",
+    "Issue": "#58 - Cálculo de peso total do carrinho",
+    "Passou no pytest?": "Não",
+    "Tokens Usados": 2603,
+    "Tempo (segundos)": 1032.59,
+    "Motivo da Falha": "Diff inválido ou não aplicável",
+    "Pull Request": "-"
+  }
+}

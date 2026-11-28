@@ -1,0 +1,24 @@
+{
+  "issue": 60,
+  "timestamp": "28/11/2026 01:14:07",
+  "etapas": [
+    {
+      "etapa": "chamada_unica",
+      "tokens_prompt": 2050,
+      "tokens_gerados": 718
+    },
+    {
+      "etapa": "aplicar_diff",
+      "ok": false
+    }
+  ],
+  "resultado": {
+    "Data/Hora": "28/11/2026 01:14:07",
+    "Issue": "#60 - Sobretaxa por excesso de peso (> 10 kg)",
+    "Passou no pytest?": "Não",
+    "Tokens Usados": 2768,
+    "Tempo (segundos)": 340.42,
+    "Motivo da Falha": "Diff inválido ou não aplicável",
+    "Pull Request": "-"
+  }
+}

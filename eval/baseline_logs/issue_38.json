@@ -1,0 +1,20 @@
+{
+  "issue": 38,
+  "timestamp": "27/11/2026 23:14:45",
+  "etapas": [
+    {
+      "etapa": "chamada_unica",
+      "tokens_prompt": 2050,
+      "tokens_gerados": 799
+    }
+  ],
+  "resultado": {
+    "Data/Hora": "27/11/2026 23:14:45",
+    "Issue": "#38 - Validação de formato de CPF",
+    "Passou no pytest?": "Não",
+    "Tokens Usados": 2849,
+    "Tempo (segundos)": 374.16,
+    "Motivo da Falha": "Infraestrutura: UnicodeEncodeError",
+    "Pull Request": "-"
+  }
+}

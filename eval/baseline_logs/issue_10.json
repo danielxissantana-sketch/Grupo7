@@ -1,0 +1,24 @@
+{
+  "issue": 10,
+  "timestamp": "27/11/2026 21:46:41",
+  "etapas": [
+    {
+      "etapa": "chamada_unica",
+      "tokens_prompt": 2050,
+      "tokens_gerados": 531
+    },
+    {
+      "etapa": "aplicar_diff",
+      "ok": false
+    }
+  ],
+  "resultado": {
+    "Data/Hora": "27/11/2026 21:46:41",
+    "Issue": "#10 - Parcelamento com juros simples (4x a 12x)",
+    "Passou no pytest?": "Não",
+    "Tokens Usados": 2581,
+    "Tempo (segundos)": 255.55,
+    "Motivo da Falha": "Diff inválido ou não aplicável",
+    "Pull Request": "-"
+  }
+}

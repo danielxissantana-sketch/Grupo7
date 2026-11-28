@@ -1,0 +1,24 @@
+{
+  "issue": 24,
+  "timestamp": "27/11/2026 22:14:33",
+  "etapas": [
+    {
+      "etapa": "chamada_unica",
+      "tokens_prompt": 2050,
+      "tokens_gerados": 608
+    },
+    {
+      "etapa": "aplicar_diff",
+      "ok": false
+    }
+  ],
+  "resultado": {
+    "Data/Hora": "27/11/2026 22:14:33",
+    "Issue": "#24 - Cupom de desconto BEMVINDO15",
+    "Passou no pytest?": "Não",
+    "Tokens Usados": 2658,
+    "Tempo (segundos)": 290.8,
+    "Motivo da Falha": "Diff inválido ou não aplicável",
+    "Pull Request": "-"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "issue": 30,
+  "timestamp": "27/11/2026 22:27:06",
+  "etapas": [
+    {
+      "etapa": "chamada_unica",
+      "tokens_prompt": 2050,
+      "tokens_gerados": 927
+    },
+    {
+      "etapa": "aplicar_diff",
+      "ok": false
+    }
+  ],
+  "resultado": {
+    "Data/Hora": "27/11/2026 22:27:06",
+    "Issue": "#30 - Cálculo de comissão do vendedor (3%)",
+    "Passou no pytest?": "Não",
+    "Tokens Usados": 2977,
+    "Tempo (segundos)": 451.51,
+    "Motivo da Falha": "Diff inválido ou não aplicável",
+    "Pull Request": "-"
+  }
+}

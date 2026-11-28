@@ -1,0 +1,24 @@
+{
+  "issue": 66,
+  "timestamp": "28/11/2026 01:31:05",
+  "etapas": [
+    {
+      "etapa": "chamada_unica",
+      "tokens_prompt": 2050,
+      "tokens_gerados": 2011
+    },
+    {
+      "etapa": "aplicar_diff",
+      "ok": false
+    }
+  ],
+  "resultado": {
+    "Data/Hora": "28/11/2026 01:31:05",
+    "Issue": "#66 - Validação básica de e-mail do cliente",
+    "Passou no pytest?": "Não",
+    "Tokens Usados": 4061,
+    "Tempo (segundos)": 20821.74,
+    "Motivo da Falha": "Diff inválido ou não aplicável",
+    "Pull Request": "-"
+  }
+}

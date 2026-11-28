@@ -1,0 +1,24 @@
+{
+  "issue": 26,
+  "timestamp": "27/11/2026 22:19:24",
+  "etapas": [
+    {
+      "etapa": "chamada_unica",
+      "tokens_prompt": 2050,
+      "tokens_gerados": 573
+    },
+    {
+      "etapa": "aplicar_diff",
+      "ok": false
+    }
+  ],
+  "resultado": {
+    "Data/Hora": "27/11/2026 22:19:24",
+    "Issue": "#26 - Taxa adicional para frete expresso",
+    "Passou no pytest?": "Não",
+    "Tokens Usados": 2623,
+    "Tempo (segundos)": 272.39,
+    "Motivo da Falha": "Diff inválido ou não aplicável",
+    "Pull Request": "-"
+  }
+}

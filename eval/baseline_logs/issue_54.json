@@ -1,0 +1,24 @@
+{
+  "issue": 54,
+  "timestamp": "28/11/2026 00:20:52",
+  "etapas": [
+    {
+      "etapa": "chamada_unica",
+      "tokens_prompt": 2050,
+      "tokens_gerados": 734
+    },
+    {
+      "etapa": "aplicar_diff",
+      "ok": false
+    }
+  ],
+  "resultado": {
+    "Data/Hora": "28/11/2026 00:20:52",
+    "Issue": "#54 - Taxa administrativa para pedidos mínimos",
+    "Passou no pytest?": "Não",
+    "Tokens Usados": 2784,
+    "Tempo (segundos)": 357.77,
+    "Motivo da Falha": "Diff inválido ou não aplicável",
+    "Pull Request": "-"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "issue": 56,
+  "timestamp": "28/11/2026 00:26:50",
+  "etapas": [],
+  "resultado": {
+    "Data/Hora": "28/11/2026 00:26:50",
+    "Issue": "#56 - Validação de formato de CEP",
+    "Passou no pytest?": "Não",
+    "Tokens Usados": 0,
+    "Tempo (segundos)": 1802.45,
+    "Motivo da Falha": "Timeout na chamada ao modelo",
+    "Pull Request": "-"
+  }
+}

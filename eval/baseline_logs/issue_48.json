@@ -1,0 +1,24 @@
+{
+  "issue": 48,
+  "timestamp": "27/11/2026 23:44:48",
+  "etapas": [
+    {
+      "etapa": "chamada_unica",
+      "tokens_prompt": 2050,
+      "tokens_gerados": 658
+    },
+    {
+      "etapa": "aplicar_diff",
+      "ok": false
+    }
+  ],
+  "resultado": {
+    "Data/Hora": "27/11/2026 23:44:48",
+    "Issue": "#48 - Cashback de 5% para clientes VIP",
+    "Passou no pytest?": "Não",
+    "Tokens Usados": 2708,
+    "Tempo (segundos)": 1570.79,
+    "Motivo da Falha": "Diff inválido ou não aplicável",
+    "Pull Request": "-"
+  }
+}

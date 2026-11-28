@@ -1,0 +1,24 @@
+{
+  "issue": 20,
+  "timestamp": "27/11/2026 22:01:39",
+  "etapas": [
+    {
+      "etapa": "chamada_unica",
+      "tokens_prompt": 2050,
+      "tokens_gerados": 741
+    },
+    {
+      "etapa": "aplicar_diff",
+      "ok": false
+    }
+  ],
+  "resultado": {
+    "Data/Hora": "27/11/2026 22:01:39",
+    "Issue": "#20 - Cálculo de frete padrão por valor",
+    "Passou no pytest?": "Não",
+    "Tokens Usados": 2791,
+    "Tempo (segundos)": 400.61,
+    "Motivo da Falha": "Diff inválido ou não aplicável",
+    "Pull Request": "-"
+  }
+}

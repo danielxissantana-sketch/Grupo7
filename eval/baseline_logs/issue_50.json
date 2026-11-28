@@ -1,0 +1,24 @@
+{
+  "issue": 50,
+  "timestamp": "28/11/2026 00:11:00",
+  "etapas": [
+    {
+      "etapa": "chamada_unica",
+      "tokens_prompt": 2050,
+      "tokens_gerados": 343
+    },
+    {
+      "etapa": "aplicar_diff",
+      "ok": false
+    }
+  ],
+  "resultado": {
+    "Data/Hora": "28/11/2026 00:11:00",
+    "Issue": "#50 - Padronização de arredondamento monetário",
+    "Passou no pytest?": "Não",
+    "Tokens Usados": 2393,
+    "Tempo (segundos)": 173.5,
+    "Motivo da Falha": "Diff inválido ou não aplicável",
+    "Pull Request": "-"
+  }
+}

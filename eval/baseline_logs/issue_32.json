@@ -1,0 +1,24 @@
+{
+  "issue": 32,
+  "timestamp": "27/11/2026 22:34:38",
+  "etapas": [
+    {
+      "etapa": "chamada_unica",
+      "tokens_prompt": 2050,
+      "tokens_gerados": 571
+    },
+    {
+      "etapa": "aplicar_diff",
+      "ok": false
+    }
+  ],
+  "resultado": {
+    "Data/Hora": "27/11/2026 22:34:38",
+    "Issue": "#32 - Acréscimo de embalagem para presente",
+    "Passou no pytest?": "Não",
+    "Tokens Usados": 2621,
+    "Tempo (segundos)": 267.92,
+    "Motivo da Falha": "Diff inválido ou não aplicável",
+    "Pull Request": "-"
+  }
+}

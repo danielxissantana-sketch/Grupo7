@@ -1,0 +1,24 @@
+{
+  "issue": 44,
+  "timestamp": "27/11/2026 23:32:41",
+  "etapas": [
+    {
+      "etapa": "chamada_unica",
+      "tokens_prompt": 2050,
+      "tokens_gerados": 672
+    },
+    {
+      "etapa": "aplicar_diff",
+      "ok": false
+    }
+  ],
+  "resultado": {
+    "Data/Hora": "27/11/2026 23:32:41",
+    "Issue": "#44 - Adicional regional de frete (Norte/Nordeste)",
+    "Passou no pytest?": "Não",
+    "Tokens Usados": 2722,
+    "Tempo (segundos)": 320.32,
+    "Motivo da Falha": "Diff inválido ou não aplicável",
+    "Pull Request": "-"
+  }
+}

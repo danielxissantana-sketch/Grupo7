@@ -1,0 +1,3 @@
+﻿sistema;execucoes;sucessos_execucao;taxa_execucao;issues_distintas;issues_resolvidas;taxa_issue;tokens_media;tempo_media
+Baseline (chamada única);30;0;0.0;30;0;0.0;2696.87;1196.2
+Sistema multiagente;38;36;94.74;35;35;100.0;960.53;929.51

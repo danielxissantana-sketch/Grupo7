@@ -1,0 +1,24 @@
+{
+  "issue": 64,
+  "timestamp": "28/11/2026 01:25:47",
+  "etapas": [
+    {
+      "etapa": "chamada_unica",
+      "tokens_prompt": 2050,
+      "tokens_gerados": 660
+    },
+    {
+      "etapa": "aplicar_diff",
+      "ok": false
+    }
+  ],
+  "resultado": {
+    "Data/Hora": "28/11/2026 01:25:47",
+    "Issue": "#64 - Resgate de pontos de fidelidade",
+    "Passou no pytest?": "Não",
+    "Tokens Usados": 2710,
+    "Tempo (segundos)": 317.98,
+    "Motivo da Falha": "Diff inválido ou não aplicável",
+    "Pull Request": "-"
+  }
+}

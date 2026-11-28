@@ -1,0 +1,24 @@
+{
+  "issue": 22,
+  "timestamp": "27/11/2026 22:08:20",
+  "etapas": [
+    {
+      "etapa": "chamada_unica",
+      "tokens_prompt": 2050,
+      "tokens_gerados": 739
+    },
+    {
+      "etapa": "aplicar_diff",
+      "ok": false
+    }
+  ],
+  "resultado": {
+    "Data/Hora": "27/11/2026 22:08:20",
+    "Issue": "#22 - Desconto de 5% para pagamento no boleto",
+    "Passou no pytest?": "Não",
+    "Tokens Usados": 2789,
+    "Tempo (segundos)": 372.37,
+    "Motivo da Falha": "Diff inválido ou não aplicável",
+    "Pull Request": "-"
+  }
+}

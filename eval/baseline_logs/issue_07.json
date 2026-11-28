@@ -1,0 +1,24 @@
+{
+  "issue": 7,
+  "timestamp": "27/11/2026 21:38:39",
+  "etapas": [
+    {
+      "etapa": "chamada_unica",
+      "tokens_prompt": 2050,
+      "tokens_gerados": 982
+    },
+    {
+      "etapa": "aplicar_diff",
+      "ok": false
+    }
+  ],
+  "resultado": {
+    "Data/Hora": "27/11/2026 21:38:39",
+    "Issue": "#7 - Desconto de 10% para pagamento via PIX",
+    "Passou no pytest?": "Não",
+    "Tokens Usados": 3032,
+    "Tempo (segundos)": 480.8,
+    "Motivo da Falha": "Diff inválido ou não aplicável",
+    "Pull Request": "-"
+  }
+}

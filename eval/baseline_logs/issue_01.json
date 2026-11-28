@@ -1,0 +1,24 @@
+{
+  "issue": 1,
+  "timestamp": "27/11/2026 21:28:04",
+  "etapas": [
+    {
+      "etapa": "chamada_unica",
+      "tokens_prompt": 2050,
+      "tokens_gerados": 739
+    },
+    {
+      "etapa": "aplicar_diff",
+      "ok": false
+    }
+  ],
+  "resultado": {
+    "Data/Hora": "27/11/2026 21:28:04",
+    "Issue": "#1 - Compras a partir de R$100,00 devem ter frete grátis",
+    "Passou no pytest?": "Não",
+    "Tokens Usados": 2789,
+    "Tempo (segundos)": 635.02,
+    "Motivo da Falha": "Diff inválido ou não aplicável",
+    "Pull Request": "-"
+  }
+}

@@ -1,0 +1,31 @@
+﻿Data/Hora;Issue;Passou no pytest?;Tokens Usados;Tempo (segundos);Motivo da Falha;Pull Request
+27/11/2026 21:28:04;#1 - Compras a partir de R$100,00 devem ter frete grátis;Não;2789;635.02;Diff inválido ou não aplicável;-
+27/11/2026 21:38:39;#7 - Desconto de 10% para pagamento via PIX;Não;3032;480.8;Diff inválido ou não aplicável;-
+27/11/2026 21:46:41;#10 - Parcelamento com juros simples (4x a 12x);Não;2581;255.55;Diff inválido ou não aplicável;-
+27/11/2026 21:50:57;#13 - Cálculo de parcelas sem juros;Não;2765;353.02;Diff inválido ou não aplicável;-
+27/11/2026 21:56:50;#17 - Cupom de desconto BEMVINDO15;Não;2642;288.44;Diff inválido ou não aplicável;-
+27/11/2026 22:01:39;#20 - Cálculo de frete padrão por valor;Não;2791;400.61;Diff inválido ou não aplicável;-
+27/11/2026 22:08:20;#22 - Desconto de 5% para pagamento no boleto;Não;2789;372.37;Diff inválido ou não aplicável;-
+27/11/2026 22:14:33;#24 - Cupom de desconto BEMVINDO15;Não;2658;290.8;Diff inválido ou não aplicável;-
+27/11/2026 22:19:24;#26 - Taxa adicional para frete expresso;Não;2623;272.39;Diff inválido ou não aplicável;-
+27/11/2026 22:23:57;#28 - Validação de disponibilidade em estoque;Não;2447;189.21;Diff inválido ou não aplicável;-
+27/11/2026 22:27:06;#30 - Cálculo de comissão do vendedor (3%);Não;2977;451.51;Diff inválido ou não aplicável;-
+27/11/2026 22:34:38;#32 - Acréscimo de embalagem para presente;Não;2621;267.92;Diff inválido ou não aplicável;-
+27/11/2026 22:39:06;#34 - Cálculo de imposto estadual (ICMS);Não;2799;361.44;Diff inválido ou não aplicável;-
+27/11/2026 22:45:08;#36 - Pontos de fidelidade por compra;Não;2644;1776.77;Diff inválido ou não aplicável;-
+27/11/2026 23:14:45;#38 - Validação de formato de CPF;Não;2849;374.16;Infraestrutura: UnicodeEncodeError;-
+27/11/2026 23:21:00;#40 - Desconto progressivo por quantidade;Não;2669;294.64;Diff inválido ou não aplicável;-
+27/11/2026 23:25:55;#42 - Bloqueio de valores negativos no pedido;Não;2885;405.17;Diff inválido ou não aplicável;-
+27/11/2026 23:32:41;#44 - Adicional regional de frete (Norte/Nordeste);Não;2722;320.32;Diff inválido ou não aplicável;-
+27/11/2026 23:38:01;#46 - Validação segura de cupons expirados;Não;2894;406.71;Diff inválido ou não aplicável;-
+27/11/2026 23:44:48;#48 - Cashback de 5% para clientes VIP;Não;2708;1570.79;Diff inválido ou não aplicável;-
+28/11/2026 00:11:00;#50 - Padronização de arredondamento monetário;Não;2393;173.5;Diff inválido ou não aplicável;-
+28/11/2026 00:13:56;#52 - Teto máximo de 30% de desconto total;Não;2820;415.97;Diff inválido ou não aplicável;-
+28/11/2026 00:20:52;#54 - Taxa administrativa para pedidos mínimos;Não;2784;357.77;Diff inválido ou não aplicável;-
+28/11/2026 00:26:50;#56 - Validação de formato de CEP;Não;0;1802.45;Timeout na chamada ao modelo;-
+28/11/2026 00:56:54;#58 - Cálculo de peso total do carrinho;Não;2603;1032.59;Diff inválido ou não aplicável;-
+28/11/2026 01:14:07;#60 - Sobretaxa por excesso de peso (> 10 kg);Não;2768;340.42;Diff inválido ou não aplicável;-
+28/11/2026 01:19:48;#62 - Desconto de 15% no mês de aniversário;Não;2803;359.1;Diff inválido ou não aplicável;-
+28/11/2026 01:25:47;#64 - Resgate de pontos de fidelidade;Não;2710;317.98;Diff inválido ou não aplicável;-
+28/11/2026 01:31:05;#66 - Validação básica de e-mail do cliente;Não;4061;20821.74;Diff inválido ou não aplicável;-
+28/11/2026 07:18:13;#68 - Taxa de entrega agendada por turno;Não;3079;496.85;Diff inválido ou não aplicável;-
